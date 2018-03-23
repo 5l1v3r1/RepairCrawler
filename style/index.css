@@ -1,0 +1,228 @@
+@charset utf-8;
+/*
+ * 公用的css--index
+ * @author 杨善龙
+ * @time 2017年2月27日10:18:54;
+ * 
+ */
+
+body , html {
+	font-size: 62.5%;
+	background: url(../bg.jpg) repeat;
+}
+h2 {
+	font-size: 2rem;
+}
+.left { float: left;}
+.right { float: right;}
+.head {
+	text-align: center;
+	background: #156339;
+	border-bottom: 2px solid #d9bba6;
+}
+.head h2 {
+	margin: 0;
+    padding: .8em;
+    color: #fff;
+}
+
+.applst li,.booklist li,.phonelist li,.schedule-list,.score-list,.surf,.transaction,.djks {
+	background: #fff;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    font-size: 1.4rem;
+    padding: 1.6rem;
+    margin: 1rem 0;
+    height: auto;
+    line-height: 1rem;
+}
+.applist li {
+    list-style-type: disc;
+    list-style-position: inside;
+    color: #156339;
+}
+.booklist li p,.phonelist li p,.djks p{
+	display: inline-block;
+    width: 100%;
+    border-bottom: 1px dashed #dbdbdb;
+    line-height: 2.8rem;
+}
+.remain-cost {
+    display: inline-block;
+    width: 100%;
+    margin-top: 4%;
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+    background: #fff;
+    border-bottom: 1px dashed #dbdbdb;
+    border-top: 1px dashed #dbdbdb;
+}
+
+.remain-cost .right {
+    margin-right: 1rem;
+}
+
+.remain-cost .left {
+    margin-left: 1rem;
+}
+
+.xq {
+    display: inline-block;
+    width: 100%;
+    border-bottom: 1px dashed #dbdbdb;
+    line-height: 2.8rem;
+}
+
+.semester {
+    position: relative;
+    padding: .5rem;
+    top: 1rem;
+    font-size: 1.4rem;
+    color: #333;
+}
+
+.week {
+    position: relative;
+    padding: .3rem;
+    top: -.3rem;
+    width: 5rem;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    color: #4caf50;
+}
+
+input[name="checkPhoneContent"] {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    padding: 0 5px;
+    width: 68%;
+    height: 2.5rem;
+    border: 1px solid #d4d4d4;
+}
+
+input[name="checkOk"]{
+    float: right;
+    margin-top: 1rem;
+    margin-right: 1rem; 
+    width: 5rem;
+    height: 2.7rem;
+    background: #156339;
+    border: 1px solid #d4d4d4;
+    color: #fff;
+}
+
+label {
+    font-size: 1.4rem;
+}
+select {
+    -webkit-appearance:none;
+    width: 80%;
+    height: 3rem;
+    padding: 0 5px;
+}
+
+ .ya {
+    background: #82AAEA;
+}
+
+.yb {
+    background: #5BC3E1;
+}
+
+.yc {
+    background: #E29EA3;
+}
+
+.yd {
+    background: #9AD460;
+}
+
+.ye {
+    background: #6EC2A8;
+}
+
+
+.yf {
+    background: #9c9;
+}
+
+.yg {
+    background: #b78d78;
+}
+
+.yh {
+    background: #cd4236;
+}
+
+.yi {
+    background: #0e90d2;
+} 
+
+.yj {
+    background: #ff748c;
+}
+
+.yk {
+    background: #996699;
+}
+
+.yl {
+    background: #666633;
+}
+
+.ym {
+    background: #33cc00;
+}
+
+.yn {
+    background: #00ff66;
+}
+
+.yo {
+    background: #339999;
+} 
+
+.yp {
+    background: #3333cc;
+}
+
+.yq {
+    background: #cccc66;
+}
+
+.yr {
+    background: #FF6A6A;
+}
+
+.ys {
+    background: #009999;
+}
+
+.yt {
+    background: #CDC9A5;
+}
+
+.yu {
+    background: #BA55D3;
+}
+
+.yv {
+    background: #8B4726;
+}
+
+.yw {
+    background: #7EC0EE;
+}
+
+.yx {
+    background: #00FA9A;
+}
+
+.yy {
+    background: #7A67EE;
+}
+
+.yz {
+    background: #3366CC;
+}

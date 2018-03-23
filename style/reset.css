@@ -1,0 +1,92 @@
+@charset utf-8;
+/*
+ * 公用的css--reset
+ * @author 杨善龙
+ * @time 2016年12月14日14:10:41;
+ * 
+ */
+/* --Elements-- */
+body,dd,div,dl,dt,fieldset,form,img,input,label,li,ol,p,pre,td,textarea,th,ul{margin:0;padding:0;}
+img{float:none;border:none;}
+fieldset{border:0;}
+address,caption,cite,code,dfn,em,strong,th,var{font-weight:400;font-style:normal;}
+ol,ul{list-style:none;}
+dd,dt,li{position:relative;}
+caption,th{text-align:center;}
+body{word-break:break-all;font:12px/1.42857143 "Microsoft Yahei", 微软雅黑, Verdana, Arial, Helvetica, sans-serif, 宋体;}
+input,select{vertical-align:middle;}
+input[type="text"],textarea { -webkit-appearance: none;}
+label{cursor:hand;}
+table{border-spacing:0;border-collapse:collapse;}
+textarea{outline:none;resize:none;}
+q:after,q:before{content:"";}
+abbr,acronym{border:0;}
+.t {margin-top: 10px;}
+.lt {margin-left: 1rem;}
+
+/* --Link Styles-- */
+a{outline:0;color:#333;text-decoration:none;cursor:pointer;blr:expression(this.onFocus=this.blur());}
+a:link,a:visited,a:active,a:hover{color:#333;text-decoration:none;}
+button{outline:0;}
+.success {color: #009688;}
+.fail {color:#f00;}
+
+/* --Reset-- */
+.tcenter{text-align:center;}
+.tright{text-align:right;}
+.tleft{text-align:left;}
+.taj{text-align:justify;}
+.vtop{vertical-align:top;}
+.vmiddle{vertical-align:middle;}
+.vbottom{vertical-align:bottom;}
+.l{float:left;}
+.r{float:right;}
+.lr{margin-left: 5px;}
+.rl{margin-right: 5px;}
+.center{margin:0 auto;}
+.hide{display:none;}
+.nowrap{white-space:nowrap;}
+
+/* 清除浮动 */
+.clear{clear:both;overflow:hidden;height:0;}
+/* 块状元素水平居中 */
+.auto{margin-right:auto;margin-left:auto;}
+
+/* 父级元素清除浮动 */
+/*仅限于ie清除浮动*/
+.fix{zoom:1;} 
+
+.fix:after{display:block;visibility:hidden;clear:both;overflow:hidden;height:0;content:"clear";}
+
+/* 单行文字溢出虚点显示 */
+.ell{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+
+/* 去除chrome记住密码输入框背景色为黄色 */
+input:-webkit-autofill{-webkit-box-shadow:0 0 0 1000px #FFF inset;}
+
+/* 去除chrome下的input蓝色边框 */
+input{outline: 0}
+
+/* 去除IEinput x */
+::-ms-clear,::-ms-reveal{display:none;}
+
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+
+	/*解决iphone 下列表滚动缓慢 */
+	-webkit-overflow-scrolling : touch;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after{
+	content: '';
+	content: none;
+}
+
