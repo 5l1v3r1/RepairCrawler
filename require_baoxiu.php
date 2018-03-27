@@ -26,6 +26,13 @@ $phone=$_POST['phone'];
 $describe=$_POST['describe'];
 
 
+/*if(!isset($userId&&$password&&$type1&&$type2&&$districtname&&$floorid&&$dormitoryid&&$phone&&$describe)){
+		//echo $con2;
+        echo '<h2>&nbsp;<i class="weui_icon_warn"></i>&nbsp;您的账号 or 密码输入错误，或者是表单填写完整，请<a href="/login_baoxiu.php">返回</a>重新输入</h2>';
+       // exit();
+       // exit();
+    }
+*/
 function login_post($url,$cookie,$post){
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
@@ -87,14 +94,33 @@ function login_post($url,$cookie,$post){
 	'goodsid' => $type2,
 	'describe'=> $describe
 	);
-		
+	
+	if(!isset($tusersid)){
+		//echo $con2;
+        echo '<h2>&nbsp;<i class="weui_icon_warn"></i>&nbsp;您的账号 or 密码输入错误，或者是表单填写完整，请<a href="/login_baoxiu.php">返回</a>重新输入</h2>';
+        exit();
+    }
+	
 	$repair_add_con = login_post($repair_add_url,$cookie,http_build_query($repair_add_post));
-	if($repair_add_con);{
+	
+	
+	$check_url = "http://202.119.160.238/Repair/RepairServlet?flag=toList&userid=".$userId."&status=1&goodsTypeId=-1";
+	
+	$check_con = login_post($check_url,$cookie,'');
+	
+
+	preg_match_all('/<span class="STYLE1">([^<>]+)<\/span>/', $check_con, $check_id);	
+	
+	$repair_id = $check_id[1][0];
+	
+	if($repair_id){
 		echo '
 		<div class="weui-msg">
 			<div class="weui-msg__icon-area"><i class="weui-icon-success weui-icon_msg"></i></div>
 			<div class="weui-msg__text-area">
 				<h2 class="weui-msg__title">报修成功</h2>
+				<h2 class="weui-msg__title">报修单号:';echo $repair_id;
+	echo '</h2>
 			</div>
 			<div class="weui-msg__opr-area">
 				<p class="weui-btn-area">
@@ -104,6 +130,8 @@ function login_post($url,$cookie,$post){
 		</div>';
 	}
 
+	
+	
 	
 ?>
 </body>
